@@ -1,0 +1,56 @@
+[
+  {
+    "insert": "议程"
+  },
+  {
+    "insert": "\n",
+    "attributes": {
+       "header": 2
+    }
+  },
+  {
+    "insert": "列出会议议程"
+  },
+  {
+    "insert": "\n",
+    "attributes": {
+      "list": "ordered"
+    }
+  },
+  {
+    "insert": "\n讨论点和结论"
+  },
+  {
+    "insert": "\n",
+    "attributes": {
+      "header": 2
+    }
+  },
+  {
+    "insert": "记录对结果有影响的重要发言和决策，并 @意见提出者"
+  },
+  {
+    "insert": "\n",
+    "attributes": {
+      "list": "ordered"
+    }
+  },
+  {
+    "insert": "\n待办事项"
+  },
+  {
+    "insert": "\n",
+    "attributes": {
+      "header": 2
+    }
+  },
+  {
+    "insert": "列出后续待办任务、期望完成时间，并 @经办人"
+  },
+  {
+    "insert": "\n",
+    "attributes": {
+      "list": "ordered"
+    }
+  }
+]
