@@ -16,3 +16,7 @@
 |                亮色模式                |               暗色模式               |
 | :------------------------------------: | :----------------------------------: |
 | ![light_theme](assets/light_theme.jpg) | ![dark_theme](assets/dark_theme.jpg) |
+
+## 构建
+
+Flutter SDK版本>=3.19.0
