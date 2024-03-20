@@ -23,7 +23,9 @@ QuillController createQuillController(BuildContext context,
   }
   document ??= Document();
   final controller = QuillController(
-      document: document, selection: const TextSelection.collapsed(offset: 0));
+      keepStyleOnNewLine: false,
+      document: document,
+      selection: const TextSelection.collapsed(offset: 0));
   return controller;
 }
 

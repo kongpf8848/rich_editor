@@ -257,14 +257,14 @@
         <entry key="flutter_quill">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_quill-9.3.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_quill-9.3.3/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter_quill_extensions">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_quill_extensions-9.3.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_quill_extensions-9.3.3/lib" />
             </list>
           </value>
         </entry>
@@ -774,8 +774,8 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_keyboard_visibility_windows-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.17/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_quill-9.3.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_quill_extensions-9.3.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_quill-9.3.3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_quill_extensions-9.3.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gal-2.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gal_linux-0.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/html-0.15.4/lib" />
