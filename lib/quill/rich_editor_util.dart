@@ -23,7 +23,6 @@ QuillController createQuillController(BuildContext context,
   }
   document ??= Document();
   final controller = QuillController(
-      keepStyleOnNewLine: false,
       document: document,
       selection: const TextSelection.collapsed(offset: 0));
   return controller;
@@ -59,7 +58,6 @@ QuillEditor createQuillEditor(BuildContext context,
     scrollController: scrollController ?? ScrollController(),
     focusNode: focusNode,
     configurations: QuillEditorConfigurations(
-      controller: controller,
       placeholder: hint,
       scrollable: scrollable,
       autoFocus: autoFocus,

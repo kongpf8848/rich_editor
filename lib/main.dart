@@ -166,44 +166,47 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _buildBody() {
-    return Column(
-      children: [
-        Expanded(
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            controller: _scrollController,
-            child: Column(
-              children: [
-                createMeetingTopicWidget(),
-                const SizedBox(
-                  height: 5,
+    return QuillProvider(
+        configurations: QuillConfigurations(controller: _quillController!),
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                controller: _scrollController,
+                child: Column(
+                  children: [
+                    createMeetingTopicWidget(),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    ValueListenableBuilder<bool>(
+                        valueListenable: _editingStatusNotifier,
+                        builder: (context, value, _) {
+                          return Container(
+                            margin: const EdgeInsets.only(left: 16, right: 16),
+                            alignment: Alignment.topLeft,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                if (value) createDivider(),
+                                _getQuillEditor(
+                                    readOnly: !value, autoFocus: value),
+                              ],
+                            ),
+                          );
+                        }),
+                  ],
                 ),
-                ValueListenableBuilder<bool>(
-                    valueListenable: _editingStatusNotifier,
-                    builder: (context, value, _) {
-                      return Container(
-                        margin: const EdgeInsets.only(left: 16, right: 16),
-                        alignment: Alignment.topLeft,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            if (value) createDivider(),
-                            _getQuillEditor(readOnly: !value, autoFocus: value),
-                          ],
-                        ),
-                      );
-                    }),
-              ],
+              ),
             ),
-          ),
-        ),
-        ValueListenableBuilder<bool>(
-            valueListenable: _editingStatusNotifier,
-            builder: ((context, value, _) {
-              return value ? _getMobileToolbar() : const SizedBox.shrink();
-            }))
-      ],
-    );
+            ValueListenableBuilder<bool>(
+                valueListenable: _editingStatusNotifier,
+                builder: ((context, value, _) {
+                  return value ? _getMobileToolbar() : const SizedBox.shrink();
+                }))
+          ],
+        ));
   }
 
   CupertinoNavigationBar createNavigationBar() {
@@ -328,8 +331,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //分割线
   createDivider() {
     return Divider(
-        thickness: 1,
-        color: Theme.of(context).twColors.dividerBackgroundColor);
+        thickness: 1, color: Theme.of(context).twColors.dividerBackgroundColor);
   }
 
   Widget _getQuillEditor({
