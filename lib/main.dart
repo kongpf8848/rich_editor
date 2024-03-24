@@ -214,44 +214,42 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Theme.of(context).twColors.primaryBackgroundColor,
       border: null,
       leading: createCloseWidget(),
-      middle: Container(
-          alignment: Alignment.centerRight,
-          child: ValueListenableBuilder<bool>(
-            builder: (BuildContext context, bool value, Widget? child) {
-              if (value) {
-                return Row(mainAxisSize: MainAxisSize.min, children: [
-                  createTextCountWidget(),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  createUndoRedoWidget(true),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  createUndoRedoWidget(false),
-                ]);
-              } else {
-                return const SizedBox.shrink();
-              }
-            },
-            valueListenable: _editingStatusNotifier,
-          )),
+      middle: createTextCountWidget(),
       trailing: ValueListenableBuilder(
-          valueListenable: _editingStatusNotifier,
-          builder: (BuildContext context, bool flag, Widget? child) {
-            return GestureDetector(
-                onTap: onClickSave,
-                child: Container(
-                    margin: const EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      flag ? "保存" : "编辑",
-                      style: TextStyle(
-                        color: Theme.of(context).twColors.primary,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
-                      ),
-                    )));
-          }),
+        valueListenable: _editingStatusNotifier,
+        builder: (BuildContext context, bool flag, Widget? child) {
+          return Row(
+            mainAxisSize: MainAxisSize.min,
+            children: flag
+                ? [
+                    createUndoRedoWidget(true),
+                    const SizedBox(
+                      width: 6,
+                    ),
+                    createUndoRedoWidget(false),
+                    const SizedBox(
+                      width: 6,
+                    ),
+                    createSaveWidget(flag)
+                  ]
+                : [createSaveWidget(flag)],
+          );
+        },
+      ),
+    );
+  }
+
+  Widget createSaveWidget(bool flag) {
+    return GestureDetector(
+      onTap: onClickSave,
+      child: Text(
+        flag ? "保存" : "编辑",
+        style: TextStyle(
+          color: Theme.of(context).twColors.primary,
+          fontWeight: FontWeight.bold,
+          fontSize: 17,
+        ),
+      ),
     );
   }
 
