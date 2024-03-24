@@ -18,4 +18,4 @@
 | ![light_theme](assets/light_theme.jpg) | ![dark_theme](assets/dark_theme.jpg) |![link](assets/link.jpg) |![demo](assets/demo.jpg) |
 
 ## 构建
-- Flutter SDK版本>=3.16.0
+Flutter SDK版本>=3.16.0
