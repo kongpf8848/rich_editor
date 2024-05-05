@@ -15,8 +15,11 @@ class DividerEmbedBuilder extends EmbedBuilder {
     bool inline,
     TextStyle textStyle,
   ) {
-    return const Column(children: [
-      Divider(thickness: 1, color: Colors.grey),
+    final isLight = Theme.of(context).brightness == Brightness.light;
+    return Column(children: [
+      Divider(
+          thickness: 1,
+          color: isLight ? const Color(0xFFD1D5DB) : const Color(0xFF525252)),
     ]);
   }
 
