@@ -144,9 +144,15 @@ class _LinkDialogState extends State<LinkDialog> {
                       child: getBottomButton('取消',
                           bgColor: Theme.of(context)
                               .twColors
-                              .fillOffBackgroundColor,
+                              .defaultWidgetBackgroundColor,
                           textColor: Theme.of(context).twColors.secondTextColor,
-                          onClick: () {
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(6),
+                            side: BorderSide(
+                                color: Theme.of(context)
+                                    .twColors
+                                    .strokeBackgroundColor!),
+                          ), onClick: () {
                     Navigator.of(context).pop();
                   })),
                   const SizedBox(
@@ -161,23 +167,27 @@ class _LinkDialogState extends State<LinkDialog> {
                     textColor: (_canPress()
                         ? Colors.white
                         : Colors.white.withOpacity(0.6)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(6),
+                    ),
                     onClick: _canPress() ? _applyLink : null,
                   )),
                 ]),
               )
             ],
           )),
-      //actions: [_okButton(), _okButton()],
     );
   }
 
   Widget getBottomButton(String text,
-      {Color? bgColor, Color? textColor, Function? onClick}) {
+      {Color? bgColor,
+      Color? textColor,
+      ShapeBorder? shape,
+      Function? onClick}) {
     return Material(
         color: bgColor,
-        borderRadius: BorderRadius.circular(4),
+        shape: shape,
         child: InkWell(
-            borderRadius: BorderRadius.circular(4),
             onTap: () {
               onClick?.call();
             },

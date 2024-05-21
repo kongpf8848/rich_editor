@@ -111,23 +111,23 @@ class TWColors extends ThemeExtension<TWColors> {
     },
   );
 
-  const TWColors({
-    required this.primary,
-    required this.primaryHover,
-    required this.primaryDisable,
-    required this.primaryBackgroundColor,
-    required this.secondBackgroundColor,
-    required this.thirdBackgroundColor,
-    required this.primaryTextColor,
-    required this.secondTextColor,
-    required this.thirdTextColor,
-    required this.dialogBackgroundColor,
-    required this.dividerBackgroundColor,
-    required this.inputBackgroundColor,
-    required this.fillOffBackgroundColor,
-    required this.iconSelectedFillColor,
-    required this.iconTintColor
-  });
+  const TWColors(
+      {required this.primary,
+      required this.primaryHover,
+      required this.primaryDisable,
+      required this.primaryBackgroundColor,
+      required this.secondBackgroundColor,
+      required this.thirdBackgroundColor,
+      required this.primaryTextColor,
+      required this.secondTextColor,
+      required this.thirdTextColor,
+      required this.dialogBackgroundColor,
+      required this.dividerBackgroundColor,
+      required this.inputBackgroundColor,
+      required this.strokeBackgroundColor,
+      required this.defaultWidgetBackgroundColor,
+      required this.iconSelectedFillColor,
+      required this.iconTintColor});
 
   /// blue/default
   ///
@@ -146,17 +146,17 @@ class TWColors extends ThemeExtension<TWColors> {
 
   /// 通用背景/background-content
   ///
-  /// 1级背景色：亮色模式为纯白色，暗色模式为#25262A
+  /// 1级背景色：亮色模式为纯白色，暗色模式为#171717
   final Color? primaryBackgroundColor;
 
   /// 通用背景/background
   ///
-  /// 2级背景色：亮色模式为#F3F4F6，暗色模式为#17181C
+  /// 2级背景色：亮色模式为#F3F4F6，暗色模式为#0A0A0A
   final Color? secondBackgroundColor;
 
   /// background-更深一层
   ///
-  /// 3级背景色：亮色模式为#E5E7EB，暗色模式为#36373C
+  /// 3级背景色：亮色模式为#E5E7EB，暗色模式为#262626
   final Color? thirdBackgroundColor;
 
   /// text/1级文字，强调、正文
@@ -174,27 +174,31 @@ class TWColors extends ThemeExtension<TWColors> {
   /// 亮色模式为#9CA3AF，暗色模式为#6B7280
   final Color? thirdTextColor;
 
-
   /// 弹窗背景颜色
   ///
-  /// 亮色模式为纯白色，暗色模式为#25262A
+  /// 亮色模式为纯白色，暗色模式为#171717
   final Color? dialogBackgroundColor;
 
   /// gray/分割线
   ///
-  /// 亮色模式为#E5E5E5，暗色模式为#404040
+  /// 亮色模式为#F5F5F5，暗色模式为#262626
   final Color? dividerBackgroundColor;
 
   /// input/背景
   ///
-  /// 亮色模式为#FFF6F6FA，暗色模式为#1A3B82F6
+  /// 亮色模式为#F3F4F6，暗色模式为#404040
   final Color? inputBackgroundColor;
 
+  /// gray/描边
+  /// 亮色模式为#E5E5E5，暗色模式为#404040
+  final Color? strokeBackgroundColor;
 
-  ///填充/off
+  /// gray/default-白
   ///
-  /// 亮色模式为#E5E7EB，暗色模式为#4B5563
-  final Color? fillOffBackgroundColor;
+  /// 亮色模式为纯白色，暗色模式为#262626
+  ///
+  /// 主要用于输入框、按钮背景
+  final Color? defaultWidgetBackgroundColor;
 
   ///icon/填充背景
   ///
@@ -205,7 +209,6 @@ class TWColors extends ThemeExtension<TWColors> {
   ///
   /// 亮色模式为#000000，暗色模式为#ffffff
   final Color? iconTintColor;
-
 
   @override
   TWColors copyWith(
@@ -221,35 +224,34 @@ class TWColors extends ThemeExtension<TWColors> {
       Color? dialogBackgroundColor,
       Color? dividerBackgroundColor,
       Color? inputBackgroundColor,
-      Color? fillDisableBackgroundColor,
+      Color? defaultWidgetBackgroundColor,
       Color? iconSelectedFillColor,
-      Color? iconTintColor
-      }) {
+      Color? iconTintColor}) {
     return TWColors(
-        primary: primaryColor ?? this.primary,
-        primaryHover: primaryHoverColor ?? this.primaryHover,
-        primaryDisable: primaryDisableColor ?? this.primaryDisable,
-        primaryBackgroundColor:
-            primaryBackgroundColor ?? this.primaryBackgroundColor,
-        secondBackgroundColor:
-            secondBackgroundColor ?? this.secondBackgroundColor,
-        thirdBackgroundColor: thirdBackgroundColor ?? this.thirdBackgroundColor,
-        primaryTextColor: primaryTextColor ?? this.primaryTextColor,
-        secondTextColor: secondTextColor ?? this.secondTextColor,
-        thirdTextColor: thirdTextColor ?? this.thirdTextColor,
-        dialogBackgroundColor:
-            dialogBackgroundColor ?? this.dialogBackgroundColor,
-        dividerBackgroundColor:
-            dividerBackgroundColor ?? this.dividerBackgroundColor,
-        inputBackgroundColor:
-            inputBackgroundColor ?? this.inputBackgroundColor,
-      fillOffBackgroundColor:
-      fillDisableBackgroundColor ?? this.fillOffBackgroundColor,
-        iconSelectedFillColor:
-        iconSelectedFillColor ?? this.iconSelectedFillColor,
-      iconTintColor:
-      iconTintColor ?? this.iconTintColor,
-        );
+      primary: primaryColor ?? this.primary,
+      primaryHover: primaryHoverColor ?? this.primaryHover,
+      primaryDisable: primaryDisableColor ?? this.primaryDisable,
+      primaryBackgroundColor:
+          primaryBackgroundColor ?? this.primaryBackgroundColor,
+      secondBackgroundColor:
+          secondBackgroundColor ?? this.secondBackgroundColor,
+      thirdBackgroundColor: thirdBackgroundColor ?? this.thirdBackgroundColor,
+      primaryTextColor: primaryTextColor ?? this.primaryTextColor,
+      secondTextColor: secondTextColor ?? this.secondTextColor,
+      thirdTextColor: thirdTextColor ?? this.thirdTextColor,
+      dialogBackgroundColor:
+          dialogBackgroundColor ?? this.dialogBackgroundColor,
+      dividerBackgroundColor:
+          dividerBackgroundColor ?? this.dividerBackgroundColor,
+      inputBackgroundColor: inputBackgroundColor ?? this.inputBackgroundColor,
+      strokeBackgroundColor:
+          strokeBackgroundColor ?? this.strokeBackgroundColor,
+      defaultWidgetBackgroundColor:
+          defaultWidgetBackgroundColor ?? this.defaultWidgetBackgroundColor,
+      iconSelectedFillColor:
+          iconSelectedFillColor ?? this.iconSelectedFillColor,
+      iconTintColor: iconTintColor ?? this.iconTintColor,
+    );
   }
 
   @override
@@ -276,12 +278,13 @@ class TWColors extends ThemeExtension<TWColors> {
           Color.lerp(dividerBackgroundColor, other.dividerBackgroundColor, t),
       inputBackgroundColor:
           Color.lerp(inputBackgroundColor, other.inputBackgroundColor, t),
+      strokeBackgroundColor:
+          Color.lerp(strokeBackgroundColor, other.strokeBackgroundColor, t),
       iconSelectedFillColor:
           Color.lerp(iconSelectedFillColor, other.iconSelectedFillColor, t),
-      fillOffBackgroundColor: Color.lerp(
-          fillOffBackgroundColor, other.fillOffBackgroundColor, t),
-      iconTintColor: Color.lerp(
-          iconTintColor, other.iconTintColor, t),
+      defaultWidgetBackgroundColor: Color.lerp(
+          defaultWidgetBackgroundColor, other.defaultWidgetBackgroundColor, t),
+      iconTintColor: Color.lerp(iconTintColor, other.iconTintColor, t),
     );
   }
 }
