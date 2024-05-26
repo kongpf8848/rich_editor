@@ -166,9 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _buildBody() {
-    return QuillProvider(
-        configurations: QuillConfigurations(controller: _quillController!),
-        child: Column(
+    return Column(
           children: [
             Expanded(
               child: SingleChildScrollView(
@@ -206,7 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   return value ? _getMobileToolbar() : const SizedBox.shrink();
                 }))
           ],
-        ));
+        );
   }
 
   CupertinoNavigationBar createNavigationBar() {

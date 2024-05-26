@@ -23,8 +23,7 @@ QuillController createQuillController(BuildContext context,
   }
   document ??= Document();
   final controller = QuillController(
-      document: document,
-      selection: const TextSelection.collapsed(offset: 0));
+      document: document, selection: const TextSelection.collapsed(offset: 0));
   return controller;
 }
 
@@ -54,15 +53,16 @@ QuillEditor createQuillEditor(BuildContext context,
     double paddingTop = 0.0,
     double paddingBottom = 0.0,
     ScrollController? scrollController}) {
+  controller.readOnly = readOnly;
   final _editor = QuillEditor(
     scrollController: scrollController ?? ScrollController(),
     focusNode: focusNode,
     configurations: QuillEditorConfigurations(
+      controller: controller,
       placeholder: hint,
       scrollable: scrollable,
       autoFocus: autoFocus,
       expands: expands,
-      readOnly: readOnly,
       showCursor: !readOnly,
       padding: EdgeInsets.only(
           left: paddingLeft,
