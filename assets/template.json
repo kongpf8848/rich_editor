@@ -36,7 +36,16 @@
     }
   },
   {
-    "insert": "简要记录结论信息"
+    "insert": "结论1"
+  },
+  {
+    "insert": "\n",
+    "attributes": {
+      "list": "ordered"
+    }
+  },
+  {
+    "insert": "结论2"
   },
   {
     "insert": "\n",
@@ -54,7 +63,16 @@
     }
   },
   {
-    "insert": "设置后续待办任务"
+    "insert": "待办1"
+  },
+  {
+    "insert": "\n",
+    "attributes": {
+      "list": "ordered"
+    }
+  },
+  {
+    "insert": "待办2"
   },
   {
     "insert": "\n",
