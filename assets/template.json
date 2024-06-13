@@ -1,6 +1,6 @@
 [
   {
-    "insert": "议程"
+    "insert": "会议议题"
   },
   {
     "insert": "\n",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "insert": "列出会议议程"
+    "insert": "议题1"
   },
   {
     "insert": "\n",
@@ -18,16 +18,7 @@
     }
   },
   {
-    "insert": "\n讨论点和结论"
-  },
-  {
-    "insert": "\n",
-    "attributes": {
-      "header": 2
-    }
-  },
-  {
-    "insert": "记录对结果有影响的重要发言和决策，并 @意见提出者"
+    "insert": "议题2"
   },
   {
     "insert": "\n",
@@ -36,7 +27,7 @@
     }
   },
   {
-    "insert": "\n待办事项"
+    "insert": "\n会议结论"
   },
   {
     "insert": "\n",
@@ -45,7 +36,25 @@
     }
   },
   {
-    "insert": "列出后续待办任务、期望完成时间，并 @经办人"
+    "insert": "简要记录本次会议的结论"
+  },
+  {
+    "insert": "\n",
+    "attributes": {
+      "list": "ordered"
+    }
+  },
+  {
+    "insert": "\n执行计划"
+  },
+  {
+    "insert": "\n",
+    "attributes": {
+      "header": 2
+    }
+  },
+  {
+    "insert": "设置后续待办任务，可使用 @人分配执行人"
   },
   {
     "insert": "\n",
