@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_quill/flutter_quill.dart';
-import 'package:flutter_quill_extensions/flutter_quill_extensions.dart';
+// import 'package:flutter_quill_extensions/flutter_quill_extensions.dart';
 import 'package:rich_editor/quill/mobile_toolbar.dart';
 import 'package:rich_editor/quill/embed_unknown.dart';
 import 'package:rich_editor/quill/embed_mention.dart';
@@ -70,7 +70,7 @@ QuillEditor createQuillEditor(BuildContext context,
           top: paddingTop,
           bottom: paddingBottom),
       embedBuilders: [
-        ...FlutterQuillEmbeds.defaultEditorBuilders(),
+        // ...FlutterQuillEmbeds.defaultEditorBuilders(),
         MentionEmbedBuilder(currentUid: userId),
         DividerEmbedBuilder()
       ],
